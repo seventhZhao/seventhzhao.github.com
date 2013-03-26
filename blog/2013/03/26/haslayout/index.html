@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Seventh.</title>
+  <title>haslayout - Seventh.</title>
   <meta name="author" content="seventh.zhao">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://seventhZhao.github.com">
+  <link rel="canonical" href="http://seventhZhao.github.com/blog/2013/03/26/haslayout">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Seventh." type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/03/26/haslayout/">Haslayout</a></h1>
+      <h1 class="entry-title">Haslayout</h1>
     
     
       <p class="meta">
@@ -95,7 +92,7 @@
   </header>
 
 
-  <div class="entry-content"><p> IE/Win的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局(layout)的内部概念。haslayout 是Windows Internet Explorer渲染引擎的一个内部组成部分。</p>
+<div class="entry-content"><p> IE/Win的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局(layout)的内部概念。haslayout 是Windows Internet Explorer渲染引擎的一个内部组成部分。</p>
 
 <pre><code> 在Internet Explorer中，一个元素要么自己对自身的内容进行计算大小和组织，要么依赖于父元素来计算尺寸和组织内容。为了调节这两个不同的概念，渲染引擎采用了 hasLayout 的属性，属性值可以为true或false。当一个元素的 hasLayout 属性值为true时，我们说这个元素有一个布局（layout）。
  如果某个HTML元素拥有 haslayout 属性，那么这个元素的 haslayout 的值一定只有 true，haslayout 为只读属性 一旦被触发，就不可逆转。（除非移除或者重置触发元素halayout的某个属性）通过 IE Developer Toolbar 可以查看 IE 下 HTML 元素是否拥有haslayout，在 IE Developer Toolbar 下，拥有 haslayout 的元素，通常显示为"haslayout = -1"。
@@ -127,59 +124,16 @@
 * E6 的躲躲猫(peek-a-boo) bug。bug 修复: _height:1%;
 </code></pre>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/26/comment-test/">Comment Test</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">seventh.zhao</span></span>
 
-<time datetime="2013-03-26T14:35:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2013</time>
-        
-      </p>
-    
-    
-  </header>
-
-
-  <div class="entry-content"><p>测试评论！！！</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/25/first-blog-in-pages/">First Blog in Pages</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -191,32 +145,31 @@
   
 
 
-<time datetime="2013-03-25T22:40:00+08:00" pubdate data-updated="true">Mar 25<span>th</span>, 2013</time>
-        
-      </p>
-    
-    
-  </header>
+<time datetime="2013-03-26T15:35:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2013</time>
+      
 
 
-  <div class="entry-content"><div class="content">
-3.25晚，github:page初尝试。打算用做技术博客。以上。
-                                        &#8212;-seventh
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
 </div>
 
-</div>
-  
-  
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/26/comment-test/" title="Previous Post: comment test">&laquo; comment test</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -244,6 +197,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

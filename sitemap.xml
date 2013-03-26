@@ -2,23 +2,27 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://seventhZhao.github.com/blog/2013/03/25/first-blog-in-pages/</loc>
-        <lastmod>2013-03-26T14:34:23+08:00</lastmod>
+        <lastmod>2013-03-26T15:54:50+08:00</lastmod>
     </url>
     <url>
         <loc>http://seventhZhao.github.com/blog/2013/03/26/comment-test/</loc>
-        <lastmod>2013-03-26T14:35:41+08:00</lastmod>
+        <lastmod>2013-03-26T15:54:50+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://seventhZhao.github.com/blog/2013/03/26/haslayout/</loc>
+        <lastmod>2013-03-26T15:54:50+08:00</lastmod>
     </url>
     <url>
         <loc>http://seventhZhao.github.com/about/</loc>
-        <lastmod>2013-03-26T15:32:58+08:00</lastmod>
+        <lastmod>2013-03-26T16:14:20+08:00</lastmod>
     </url>
     <url>
         <loc>http://seventhZhao.github.com/blog/archives/</loc>
-        <lastmod>2013-03-26T14:35:41+08:00</lastmod>
+        <lastmod>2013-03-26T15:39:25+08:00</lastmod>
     </url>
     <url>
         <loc>http://seventhZhao.github.com/</loc>
-        <lastmod>2013-03-26T14:35:41+08:00</lastmod>
+        <lastmod>2013-03-26T15:39:25+08:00</lastmod>
     </url>
     <url>
         <loc>http://seventhZhao.github.com/robots.txt</loc>

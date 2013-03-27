@@ -9,7 +9,8 @@
   <meta name="author" content="seventh.zhao">
 
   
-  <meta name="description" content="IE/Win的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局(layout)的内部概念。haslayout 是Windows Internet Explorer渲染引擎的一个内部组成部分。 在Internet Explorer中，一个元素要么自己对自身的内容进行计算大小和组织， &hellip;">
+  <meta name="description" content="IE/Win的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局(layout)的内部概念。haslayout 是WindowsInternet Explorer渲染引擎的一个内部组成部分。
+在Internet Explorer中，一个元素要么自己对自身的内容进行计算大小和组织， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,13 +99,10 @@
   </header>
 
 
-  <div class="entry-content"><p> IE/Win的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局(layout)的内部概念。haslayout 是Windows Internet Explorer渲染引擎的一个内部组成部分。</p>
-
-<pre><code> 在Internet Explorer中，一个元素要么自己对自身的内容进行计算大小和组织，要么依赖于父元素来计算尺寸和组织内容。为了调节这两个不同的概念，渲染引擎采用了 hasLayout 的属性，属性值可以为true或false。当一个元素的 hasLayout 属性值为true时，我们说这个元素有一个布局（layout）。
- 如果某个HTML元素拥有 haslayout 属性，那么这个元素的 haslayout 的值一定只有 true，haslayout 为只读属性 一旦被触发，就不可逆转。（除非移除或者重置触发元素halayout的某个属性）通过 IE Developer Toolbar 可以查看 IE 下 HTML 元素是否拥有haslayout，在 IE Developer Toolbar 下，拥有 haslayout 的元素，通常显示为"haslayout = -1"。
-</code></pre>
-
-<p>下列元素应该是默认具有 layout 的：</p>
+  <div class="entry-content"><p>IE/Win的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局(layout)的内部概念。haslayout 是WindowsInternet Explorer渲染引擎的一个内部组成部分。
+在Internet Explorer中，一个元素要么自己对自身的内容进行计算大小和组织，要么依赖于父元素来计算尺寸和组织内容。为了调节这两个不同的概念，渲染引擎采用了 hasLayout 的属性，属性值可以为true或false。当一个元素的hasLayout 属性值为true时，我们说这个元素有一个布局（layout）。
+如果某个HTML元素拥有 haslayout 属性，那么这个元素的 haslayout 的值一定只有 true，haslayout 为只读属性一旦被触发，就不可逆转。（除非移除或者重置触发元素halayout的某个属性）通过 IE Developer Toolbar可以查看 IE 下 HTML 元素是否拥有haslayout，在 IE Developer Toolbar 下，拥有 haslayout的元素，通常显示为&#8221;haslayout = -1&#8221;。
+下列元素应该是默认具有 layout 的：</p>
 
 <pre><code>* &lt;html&gt;, &lt;body&gt;
 * &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;
@@ -113,21 +111,18 @@
 * &lt;input&gt;, &lt;button&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;fieldset&gt;, &lt;legend&gt;
 * &lt;iframe&gt;, &lt;embed&gt;, &lt;object&gt;, &lt;applet&gt;
 * &lt;marquee&gt;
-
- 具有"layout" 的元素如果同时 display: inline ，那么它的行为就和标准中所说的 inline-block 很类似了：在段落中和普通文字一样在水平方向和连续排列，受 vertical-align 影响，并且大小可以根据内容自适应调整。这也可以解释为什么单单在 IE/Win 中内联元素可以包含块级元素而少出问题，因为在别的浏览器中 display: inline 就是内联，不像 IE/Win 一旦内联元素拥有 layout 还会变成 inline-block。
-
- 当网页在 IE 中有异常表现时，可以尝试激发 haslayout 来看看是不是问题所在。常用的方法是给某元素 css 设定 zoom:1 。使用 zoom:1 是因为大多数情况下，它能在不影响现有环境的条件下激发元素的 haslayout。而一旦问题消失，那基本上就可以判断是 haslayout 的原因。然后就可以通过设定相应的 css 属性来对这个问题进行修正了。建议首先要考虑的是设定元素的 width/height 属性，其次再考虑其他属性。
-
- 对 IE6 及更早版本来说，常用的方法被称为霍莉破解(Holly hack)，即设定这个元素的高度为 1% (height:1%;)。需要注意的是，当这个元素的 overflow 属性被设置为 visible 时，这个方法就失效了。或者使用 IE 的条件注释。
 </code></pre>
+
+<p>具有&#8221;layout&#8221; 的元素如果同时 display: inline ，那么它的行为就和标准中所说的 inline-block很类似了：在段落中和普通文字一样在水平方向和连续排列，受 vertical-align影响，并且大小可以根据内容自适应调整。这也可以解释为什么单单在IE/Win中内联元素可以包含块级元素而少出问题，因为在别的浏览器中display:inline 就是内联，不像 IE/Win一旦内联元素拥有 layout 还会变成 inline-block。当网页在IE中有异常表现时，可以尝试激发 haslayout来看看是不是问题所在。常用的方法是给某元素 css 设定zoom:1 。使用 zoom:1是因为大多数情况下，它能在不影响现有环境的条件下激发元素的haslayout。而一旦问题消失，那基本上就可以判断是 haslayout的原因。然后就可以通过设定相应的css属性来对这个问题进行修正了。建议首先要考虑的是设定元素的width/height 属性，其次再考虑其他属性。
+对 IE6 及更早版本来说，常用的方法被称为霍莉破解(Holly hack)，即设定这个元素的高度为 1% (height:1%;)。需要注意的是，当这个元素的 overflow 属性被设置为 visible 时，这个方法就失效了。或者使用 IE 的条件注释。</p>
 
 <p>对 IE7 来说，最好的方法时设置元素的最小高度为 0 (min-height:0;)。</p>
 
-<p>haslayout 问题引起的常见 bug：</p>
+<p>haslayout 问题引起的常见bug：</p>
 
-<pre><code>* IE6 及更低版本的双空白边浮动 bug。bug 修复: display:inline;
-* IE5-6/win 的 3 像素偏移 bug。bug 修复: _height:1%;
-* E6 的躲躲猫(peek-a-boo) bug。bug 修复: _height:1%;
+<pre><code>IE6及更低版本的双空白边浮动bug  修复: display:inline
+IE5-6/win的3像素偏移bug    修复: _height:1%
+IE6的躲躲猫(peek-a-boo)bug  修复: _height:1%
 </code></pre>
 </div>
   
@@ -227,7 +222,7 @@
 <aside class="sidebar">
   
     <section>
-  <h1>Recent Posts</h1>
+  <h1>最近的文章</h1>
   <ul id="recent_posts">
     
       <li class="post">

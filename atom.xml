@@ -4,7 +4,7 @@
   <title><![CDATA[Seventh.]]></title>
   <link href="http://seventhZhao.github.com/atom.xml" rel="self"/>
   <link href="http://seventhZhao.github.com/"/>
-  <updated>2013-03-28T23:04:51+08:00</updated>
+  <updated>2013-04-08T22:36:44+08:00</updated>
   <id>http://seventhZhao.github.com/</id>
   <author>
     <name><![CDATA[seventh.zhao]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HTML结构]]></title>
+    <link href="http://seventhZhao.github.com/blog/2013/03/30/3-dot-30/"/>
+    <updated>2013-03-30T19:55:00+08:00</updated>
+    <id>http://seventhZhao.github.com/blog/2013/03/30/3-dot-30</id>
+    <content type="html"><![CDATA[<p>最近复习HTML的基础，重新较全面的了解了HTML的结构。</p>
+
+<p>HTML结构：</p>
+
+<p>不同标签有不同的表现和语义功能。在最近复习的一本书（cssDesignPatterns）中,作者按元素的功能和性质讲标签划分为四个大类：</p>
+
+<h2>结构化块状元素：</h2>
+
+<blockquote><p>结构化块状元素的目的是把文档结构化，方便浏览器解析出一个更好的文档视图，搜索引擎才能识别出重要的关键词，文档处理工具才能应用某些技术（如XSLT）来提取内容和转换结构，JavaScript才能更准确的获取结构进行修改。</p></blockquote>
+
+<p>结构化元素拥有结构化的含义，却没有什么语义上的内涵，结构化元素是让浏览器和查看代码的人员了解html是如何组织的。<br/>
+主要的结构化块状元素：<code>ol</code> <code>ul</code> <code>dl</code> <code>table</code> ；<br/>
+支持结构化的元素：<code>li</code> <code>dt</code> <code>dd</code> <code>caption</code> <code>thead</code> <code>tfoot</code> <code>tbody</code> <code>colgroup</code> <code>col</code>。</p>
+
+<h2>终端块状元素：</h2>
+
+<p>终端块状元素是文档结构的终结元素，即终端块状元素中不应该有表示结构的元素。终端块状元素是文档块状结构的终端节点。主要的终端块状元素：<code>h*</code>  <code>p</code> <code>blockquote</code> <code>dt</code> <code>address</code> <code>caption</code>。
+终端块状元素是内容的主要容器，内容主要是指内联元素和内容。</p>
+
+<h2>多目标块状元素：</h2>
+
+<p>多目标块状元素兼具上面两种元素的功能，可以自由的扩展文档的结构。
+HTML提供了7中元素：<code>div</code> <code>li</code> <code>dd</code> <code>td</code> <code>th</code> <code>form</code>。
+比如说：当一个列表项作为终端的时候，其中的内容就成为某个列表中的一项。当列表包含了一个结构化块状元素（表格或者另一个列表）时，它从结构上就作为一个大的嵌套结构中的小节点。</p>
+
+<p>多目标块状元素既可以包含块状元素也可以包含内容，但是不能同时包含两者。文本与内联元素的组合才构成了内容。块状元素不应该作为内联元素和文本的兄弟元素。作者将之称为<em>混合内容</em>。应当把内容放在块状元素中——而不是放在他们之间。因为当浏览器遇到混合内容的时候，它会给内容套上一个匿名容器。这是因为当块状元素是按顺序排列的，而其中穿插内容的时候，浏览器不能通识解析两者。而且我们不能对这个匿名块状元素赋予样式。</p>
+
+<h2>内联元素：</h2>
+
+<p>HTML提供了内联元素用于识别文本的含义、控制文本排列的顺序、向文档插入额外的内容。内联元素是文档最底级的标签，HTML中有许多语义化的标签，提供了一些默认的样式。如：<code>code</code> 会被解析为等宽字体，还有<code>em</code> <code>strong</code>元素会对内容进行强调。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[haslayout]]></title>

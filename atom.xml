@@ -4,7 +4,7 @@
   <title><![CDATA[Seventh.]]></title>
   <link href="http://seventhZhao.github.com/atom.xml" rel="self"/>
   <link href="http://seventhZhao.github.com/"/>
-  <updated>2013-04-17T21:53:07+08:00</updated>
+  <updated>2013-04-17T22:07:44+08:00</updated>
   <id>http://seventhZhao.github.com/</id>
   <author>
     <name><![CDATA[seventh.zhao]]></name>
@@ -33,7 +33,7 @@
 <p>为了使表现和结构相分离，你必须用 CSS 来代替表格去控制一个文档的表现。当你习惯于用表格来布局的时候，这将使你感觉很奇怪很不适应，但是，这并不像它看上去的那么困难。你可以在网上找到许多可用的帮助，它的好处太多了，所以它确实值得您去花时间去转变一下思想，这点很重要。</p>
 
 <p>相关文章:
-Why tables for layout is stupid
+<a href="http://www.hotdesign.com/seybold/">Why tables for layout is stupid</a>
 在 Seybold 2003 上的一个演讲幻灯演示。
 语义化的 HTML</p>
 

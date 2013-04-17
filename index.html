@@ -9,7 +9,7 @@
   <meta name="author" content="seventh.zhao">
 
   
-  <meta name="description" content="最近复习HTML的基础，重新较全面的了解了HTML的结构。 HTML结构： 不同标签有不同的表现和语义功能。在最近复习的一本书（cssDesignPatterns）中,作者按元素的功能和性质讲标签划分为四个大类： 结构化块状元素： 结构化块状元素的目的是把文档结构化， &hellip;">
+  <meta name="description" content="当讨论 Web 标准时，一些事情总是被提及，那就是结构和表现分离的重要性。刚开始的时候理解结构和表现的不同之处可能很困难，特别是如果你不习惯于思考文档的语义结构时。然而，理解这点是很重要的，因为，当结构和表现分离后，用 CSS 文档来控制表现就是很容易的一件事了。 结构 是由文档中的主体部分， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +67,249 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/17/4-dot-17/">语义化你的标签</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-17T20:47:00+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/17/4-dot-17/#disqus_thread">Comments</a>
+        
+      </p>
+    
+    
+  </header>
+
+
+  <div class="entry-content"><p>当讨论 Web 标准时，一些事情总是被提及，那就是结构和表现分离的重要性。刚开始的时候理解结构和表现的不同之处可能很困难，特别是如果你不习惯于思考文档的语义结构时。然而，理解这点是很重要的，因为，当结构和表现分离后，用 CSS 文档来控制表现就是很容易的一件事了。</p>
+
+<p>结构 是由文档中的主体部分，再加上语义化、结构化的标记。</p>
+
+<p>表现 是你赋予内容的一种样式。在大多数情况下，表现就是文档看起来的样子，但是它同样可以影响一个文档“听”起来的样子&#8212;-毕竟不是每个人使用的都是图像化的浏览器。</p>
+
+<p>尽可能的把结构和表现相分离。理论上讲，你应该用一个 HTML 文档来保存内容与结构，用一个 CSS 文档来控制整个文档的表现。</p>
+
+<p>如今表现与结构的分离在网上还不是很普遍。大多数网站上的HTML代码既缺少语义也缺少结构。</p>
+
+<p>用表格布局</p>
+
+<p>为了使表现和结构相分离，你必须用 CSS 来代替表格去控制一个文档的表现。当你习惯于用表格来布局的时候，这将使你感觉很奇怪很不适应，但是，这并不像它看上去的那么困难。你可以在网上找到许多可用的帮助，它的好处太多了，所以它确实值得您去花时间去转变一下思想，这点很重要。</p>
+
+<p>相关文章:
+Why tables for layout is stupid
+在 Seybold 2003 上的一个演讲幻灯演示。
+语义化的 HTML</p>
+
+<p>分离结构与表现的另一个重要方面是使用语义化的标记来构造文档内容。一个 XHTML 元素的存在就意味被标记内容的那部分有相应的结构化的意义，没有理由使用其他的标记。换句话说，不要让 CSS 使一个 HTML 元素看起来就像另一个 HTML 元素，比如用<code>&lt;span&gt;</code>来代替<code>&lt;h1&gt;</code>标记标题。</p>
+
+<p>通过使用语义化的 HTML ，你将会使文档中的不同部分对于任何浏览器都变得有意义，无论浏览器是现今 PC 上的最新的图象化浏览器，还是不支持 CSS 的老浏览器，或者还是 Unix shell 中的文本浏览器。</p>
+
+<p>标题</p>
+
+<p>为了给标题做标记, 要用 <code>&lt;h1&gt;</code> 、 <code>&lt;h2&gt;</code> 、 <code>&lt;h3&gt;</code> 、 <code>&lt;h4&gt;</code> 、 <code>&lt;h5&gt;</code> 或者 <code>&lt;h6&gt;</code> ，这完全取决于标题的等级。 <code>&lt;h1&gt;</code> 是最高的等级。</p>
+
+<p>例如:</p>
+
+<pre><code>&lt;h1&gt;文档标题&lt;/h1&gt;
+&lt;h2&gt;次级标题&lt;/h2&gt;
+</code></pre>
+
+<h1>文档标题</h1>
+
+<h2>次级标题</h2>
+
+<p>段落</p>
+
+<p>用<code>&lt;p&gt;</code>来标记段落。不要使用 <code>&lt;br /&gt;</code> 来生成段落间的空行。用 CSS 来控制段落间的空隙（Margins），这个空隙可以确保段落标记的正确无误。</p>
+
+<p>例如:</p>
+
+<pre><code>&lt;p&gt;浪奔浪流，万里滔滔江水永不休，淘尽了世间事，混作滔滔一片潮流，是喜是愁，
+浪里分不清欢笑悲忧，成功失败，浪里看不出有未有。爱你恨你问君知否，似大江一发不收，
+转千湾转千滩，也未平复此中争斗，又有喜又有愁，就算分不清欢笑悲忧，仍愿翻百千浪，
+在我心中起伏够。&lt;/p&gt;
+</code></pre>
+
+<p>浪奔浪流，万里滔滔江水永不休，淘尽了世间事，混作滔滔一片潮流，是喜是愁，
+浪里分不清欢笑悲忧，成功失败，浪里看不出有未有。爱你恨你问君知否，似大江一发不收，
+转千湾转千滩，也未平复此中争斗，又有喜又有愁，就算分不清欢笑悲忧，仍愿翻百千浪，
+在我心中起伏够。</p>
+
+
+<p>列表</p>
+
+<p>一些事物的罗列应使用列表来显示。在XHTML中有三种列表的方法：无序、有序和自定义。</p>
+
+<p>无序列表, 就是我们所熟知的圆圈列表, 以 <code>&lt;ul&gt;</code>开始，以<code>&lt;/ul&gt;</code>结束。每一个列表项都包含在<code>&lt;li&gt;</code>之中。</p>
+
+<p>有序列表，以<code>&lt;ol&gt;</code>开始，以<code>&lt;/ol&gt;</code>结束。</p>
+
+<p>自定义列表有一些不同，可以用来标记一些列表项和描述，以<code>&lt;dl&gt;</code>开始，以<code>&lt;/dl&gt;</code>结束。每一个被描述的项目，要包含在<code>&lt;dt&gt;</code>中，而描述的内容要包含在<code>&lt;dd&gt;</code>中。</p>
+
+<p>例如:</p>
+
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;项目一&lt;/li&gt;
+    &lt;li&gt;项目二&lt;/li&gt;
+    &lt;li&gt;项目三&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<ul>
+    <li>项目一</li>
+    <li>项目二</li>
+    <li>项目三</li>
+</ul>
+
+
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;项目一&lt;/li&gt;
+    &lt;li&gt;项目二&lt;/li&gt;
+    &lt;li&gt;项目三&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<ol>
+    <li>项目一</li>
+    <li>项目二</li>
+    <li>项目三</li>
+</ol>
+
+
+<pre><code>&lt;dl&gt;
+&lt;dt&gt;上海滩&lt;/dt&gt;
+&lt;dd&gt;这部拍摄于1980年的《上海滩》堪称是香港电视史上最成功、最经典的剧集。
+当年在香港播出以后，产生了巨大的轰动效应。&lt;/dd&gt;
+&lt;dt&gt;周润发&lt;/dt&gt;
+&lt;dd&gt;和所有伟大的影星一样，周润发印证了一个时代，一个香港电影的黄金时代。
+    风衣墨镜、冷血双枪、阳光微笑，都封存胶片之中，当我们回首寻望的时候，发哥已被刻为一个时代的坐标。&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+<dl>
+    <dt>上海滩</dt>
+    <dd>这部拍摄于1980年的《上海滩》堪称是香港电视史上最成功、最经典的剧集。
+    当年在香港播出以后，产生了巨大的轰动效应。</dd>
+    <dt>周润发</dt>
+    <dd>和所有伟大的影星一样，周润发印证了一个时代，一个香港电影的黄金时代。
+    风衣墨镜、冷血双枪、阳光微笑，都封存胶片之中，当我们回首寻望的时候，发哥已被刻为一个时代的坐标。</dd>
+</dl>
+
+
+<p>引用</p>
+
+<p>用<code>&lt;q&gt;</code>来标记简短的单行引用。Web浏览器会自动识别在<code>&lt;q&gt;</code> 之间的内容。不幸的是，IE不能识别，并且有些时候，<code>&lt;q&gt;</code>会引起一些可访问性的问题。正因为如此，一些人建议尽量不要使用<code>&lt;q&gt;</code>,手动的插入引用标记。在一个包含适当的类的<code>&lt;span&gt;</code>中加入单行的引用内容，那么就可以用CSS来给引用设计样式了，但是这个没有语义上的意义。 您可以读读Mark Pilgrim写的The Q tag 关于处理<code>&lt;q&gt;</code>相关问题的看法。</p>
+
+<p>对于那些一段或者好几段的长篇引用，就应当使用<code>&lt;blockquote&gt;</code>了。CSS可以用来定义引用的样式。注意，一段文章是不可以直接放在<code>&lt;blockquote&gt;</code>中的，引用的内容还必须包含在一个元素中，通常是<code>&lt;p&gt;</code>。</p>
+
+<p>属性cite既可以与<code>&lt;q&gt;</code>一起用，也可以与<code>&lt;blockquote&gt;</code>一起用，用来提供引用内容的来源地址。需要注意的是，如果你使用<code>&lt;span&gt;</code>来代替<code>&lt;q&gt;</code>标记引用内容,那么你就不能使用cite属性了。</p>
+
+<p>例如:</p>
+
+<pre><code>&lt;p&gt;我的座佑名&lt;q cite="http://www.x5.com.cn/"&gt;别人的高标准，是我的基本要求。&lt;/q&gt;.&lt;/p&gt;
+</code></pre>
+
+<p>我的座佑名<q cite="http://www.x5.com.cn/">别人的高标准，是我的基本要求。</q>.</p>
+
+
+<pre><code>&lt;p&gt;我的座佑名&lt;span class="quote"&gt;&amp;#8220;别人的高标准，是我的基本要求。
+&amp;#8221;&lt;/span&gt;.&lt;/p&gt;
+</code></pre>
+
+<p>我的座佑名<span class="quote">&#8220;别人的高标准，是我的基本要求。&#8221;</span>.</p>
+
+
+<pre><code>&lt;blockquote cite="http://www.w3cn.org/"&gt;
+    &lt;p&gt;&amp;#8220;我们大部分人都有深刻体验，每当主流浏览器版本的升级，我们刚建立的网站就可能变得过时，
+    我们就需要升级或者重新建造一遍网站。例如1996-1999年典型的"浏览器大战"，
+    为了兼容 Netscape 和 IE，网站不得不为这两种浏览器写不同的代码。同样的，
+    每当新的网络技术和交互设备的出现，我们也需要制作一个新版本来支持这种新技术或新设备，
+    例如支持手机上网的 WAP 技术。类似的问题举不胜举：网站代码臃肿、繁杂浪费了我们大量的带宽；
+    针对某种浏览器的 DHTML 特效，屏蔽了部分潜在的客户；不易用的代码，残障人士无法浏览网站等等。
+    这是一种恶性循环，是一种巨大的浪费。&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+<p>“我们大部分人都有深刻体验，每当主流浏览器版本的升级，我们刚建立的网站就可能变得过时，我们就需要升级或者重新建造一遍网站。例如1996-1999年典型的&#8221;浏览器大战&#8221;，为了兼容 Netscape 和 IE ，网站不得不为这两种浏览器写不同的代码。同样的，每当新的网络技术和交互设备的出现，我们也需要制作一个新版本来支持这种新技术或新设备，例如支持手机上网的WAP技术。类似的问题举不胜举：网站代码臃肿、繁杂浪费了我们大量的带宽；针对某种浏览器的DHTML特效，屏蔽了部分潜在的客户；不易用的代码，残障人士无法浏览网站等等。这是一种恶性循环，是一种巨大的浪费。”</p>
+
+<p>强调</p>
+
+<p><code>&lt;em&gt;</code> 是用作强调的，<code>&lt;strong&gt;</code>是用作重点强调的。 大部分浏览器用斜体显示强调的内容，用粗体来显示重点强调的内容，然而，这是没有必要的，如果是为了确定强调内容的显示方式，最好的方法就是使用CSS来定义他们的表现。当你想要的只是视觉上的效果时，就不要使用强调了。</p>
+
+<p>例如:</p>
+
+<pre><code>&lt;p&gt;&lt;em&gt;强调&lt;/em&gt; 的文本通常用斜体显示，
+然而， &lt;strong&gt;特别强调&lt;/strong&gt; 的文本通常以粗体显示。&lt;/p&gt;
+</code></pre>
+
+<p><em>强调</em> 的文本通常用斜体显示，
+然而， <strong>特别强调</strong> 的文本通常以粗体显示。</p>
+
+
+<p>强调的文本通常用斜体显示, 然而，特别强调的文本通常以粗体显示。</p>
+
+<p>表格</p>
+
+<p>XHTML 中的表格不应用来布局。然而如果是为了标记列表的数据，就应该使用表格了。为了使数据表格有更强的访问性，了解和使用各种构造表格的组件就很重要了。比如表格标题 （<code>&lt;th&gt;</code>）、摘要（summary 属性）和首部说明 （ <code>&lt;caption&gt;</code>标签）。</p>
+
+<p>例如:</p>
+
+<pre><code>&lt;table class="举例" summary="1999年到2003年，列表显示中国的平均人口增长率。"&gt;
+    &lt;caption&gt;中国的年均人口的增长, 1999–2003&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;td&gt;&amp;#160;&lt;/td&gt;
+        &lt;th scope="col"&gt;1999&lt;/th&gt;
+        &lt;th scope="col"&gt;2000&lt;/th&gt;
+        &lt;th scope="col"&gt;2001&lt;/th&gt;
+        &lt;th scope="col"&gt;2002&lt;/th&gt;
+        &lt;th scope="col"&gt;2003&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+        &lt;th&gt;人口&lt;/th&gt;
+        &lt;td scope="row"&gt;8 861 426&lt;/td&gt;
+        &lt;td scope="row"&gt;8 882 792&lt;/td&gt;
+        &lt;td scope="row"&gt;8 909 128&lt;/td&gt;
+        &lt;td scope="row"&gt;8 940 788&lt;/td&gt;
+        &lt;td scope="row"&gt;8 975 670&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;th&gt;增长&lt;/th&gt;
+        &lt;td scope="row"&gt;7 104&lt;/td&gt;
+        &lt;td scope="row"&gt;21 366&lt;/td&gt;
+        &lt;td scope="row"&gt;26 368&lt;/td&gt;
+        &lt;td scope="row"&gt;31 884&lt;/td&gt;
+        &lt;td scope="row"&gt;34 882&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -292,6 +535,10 @@ IE6的躲躲猫(peek-a-boo)bug  修复: _height:1%
     <section>
   <h1>最近的文章</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/17/4-dot-17/">语义化你的标签</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/30/3-dot-30/">HTML结构</a>

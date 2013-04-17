@@ -4,7 +4,7 @@
   <title><![CDATA[Seventh.]]></title>
   <link href="http://seventhZhao.github.com/atom.xml" rel="self"/>
   <link href="http://seventhZhao.github.com/"/>
-  <updated>2013-04-17T21:19:50+08:00</updated>
+  <updated>2013-04-17T21:53:07+08:00</updated>
   <id>http://seventhZhao.github.com/</id>
   <author>
     <name><![CDATA[seventh.zhao]]></name>
@@ -223,6 +223,16 @@ Why tables for layout is stupid
     &lt;/tbody&gt;
 &lt;/table&gt;
 </code></pre>
+
+<p>文章摘自：<a href="http://www.456bereastreet.com/lab/developing_with_web_standards/zh/#structure">用Web标准进行开发</a>
+上面是上次面试后专门查找的一些内容，网络上面说到的语义化一般都知识专门强调一些比较常用的元素的语义。如果想更深更全面的了解语义化，还是得从W3C的文档说明上面着手。
+下面是一些html5常用标签的说明：
+<code>header</code>：标记头部区域的内容，可用于整个页面或页面中的一块区域，单个页面中可重出现。
+<code>footer</code>：标记脚步区域的内容，可用于整个页面或页面中的一块区域。
+<code>section</code>：Web页面中的一块区域
+<code>article</code>：独立的文章内容
+<code>aside</code>：相关内容或者引文
+<code>nav</code>：导航类辅助内容</p>
 ]]></content>
   </entry>
   
